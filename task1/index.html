@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/task1/assets/css/style.css">
+    <link rel="stylesheet" href="/task1/assets/js/script.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div id="color_picker" class="background d-flex flex-column justify-content-center">
+        <h1>Color Picker</h1>
+        <div>
+            <button class="button_class" id="btn1" onclick="changeColor('#e0e0e0')">#e0e0e0</button>
+            <button class="button_class" id="btn2" onclick="changeColor('#6fcf97')">#6fcf97</button>
+            <button class="button_class" id="btn3" onclick="changeColor('#56ccf2')">#56ccf2</button>
+            <button class="button_class" id="btn4" onclick="changeColor('#bb6bd9')">#bb6bd9</button>
+        </div>
+        <p class="color_background">Background Color : <span id="selectedColorHexCode" class="span_color">#fffff</span>
+        </p>
+        <p>Try clicking on one of the colors above to change the background color of this page!</p>
+    </div>
+    <script>
+        let background = document.getElementById("color_picker");
+        let color = document.getElementById("selectedColorHexCode");
+        function changeColor(hexcode) {
+            background.style.backgroundColor = hexcode;
+            color.textContent = hexcode
+        }
+        document.getElementById("btn1").style.backgroundColor = "#e0e0e0";
+        document.getElementById("btn2").style.backgroundColor = "#6fcf97";
+        document.getElementById("btn3").style.backgroundColor = "#56ccf2";
+        document.getElementById("btn4").style.backgroundColor = "#bb6bd9";
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
